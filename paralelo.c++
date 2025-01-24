@@ -24,7 +24,7 @@ int main()
     int pedazos = chunk;
 
     #pragma omp parallel for \
-    shared(a, b, c, pedazos) private(1) \
+    shared(a, b, c, pedazos) private(i) \
     schedule(static, pedazos)
 
     for (i = 0; i < N; i++)
